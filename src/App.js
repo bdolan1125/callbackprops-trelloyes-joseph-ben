@@ -19,8 +19,10 @@ class App extends Component {
     this.setState({lists: allLists})
   }
 
-  findOnClick() {
-    // cardIds.map().filter()
+  randomOnClick = (arg) =>{
+    this.state.allCards.push(()=>{
+      
+    })
   }
 
   render() {

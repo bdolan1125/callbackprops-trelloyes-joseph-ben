@@ -23,7 +23,7 @@ export default function List(props) {
           type='button'
           className='List-add-button'
         >
-          + Add Random Card
+           Add Random Card
         </button>
       </div>
     </section>
