@@ -5,21 +5,18 @@ import store from './STORE'
 
 class App extends Component {
   state = JSON.parse(JSON.stringify(store));
-   
-  mapArray() {
-    this.state.map(){
-     filterArray(){
-       
-     }
-    }
-  }
-
-  filterArray() {
-
-  }
   
   removeOnClick = (arg) =>{
-    this.setState({})
+    let allLists = this.state.lists
+    allLists = allLists.map(list =>{
+      list.cardIds = list.cardIds.filter(cardId =>{
+        return cardId !== arg;
+
+        
+      })
+      return list
+    })
+    this.setState({lists: allLists})
   }
 
   findOnClick() {
@@ -34,7 +31,7 @@ class App extends Component {
           <h1>Trelloyes!</h1>
         </header>
         <div className='App-list'>
-          {store.lists.map(list => (
+          {this.state.lists.map(list => (
             <List
               key={list.id}
               header={list.header}
