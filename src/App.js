@@ -5,10 +5,20 @@ import store from './STORE'
 
 class App extends Component {
   state = JSON.parse(JSON.stringify(store));
+   
+  mapArray() {
+    this.state.map(){
+     filterArray(){
+       
+     }
+    }
+  }
+
+  filterArray() {
+
+  }
   
   removeOnClick = (arg) =>{
-    console.log(this.state)
-    console.log(arg)
     this.setState({})
   }
 
