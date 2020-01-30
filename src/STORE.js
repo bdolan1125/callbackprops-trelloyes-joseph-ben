@@ -1,6 +1,6 @@
 
 export default {
-  lists: [
+ lists: [
     {
       id: '1',
       header: 'First list',

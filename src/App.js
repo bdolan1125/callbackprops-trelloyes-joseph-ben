@@ -1,14 +1,20 @@
 import React, { Component } from 'react';
 import List from './List'
 import './App.css';
+import store from './STORE'
 
 class App extends Component {
-  static defaultProps = {
-    store: {
-      lists: [],
-      allCards: {},
-    }
-  };
+  state = JSON.parse(JSON.stringify(store));
+  
+  removeOnClick = (arg) =>{
+    console.log(this.state)
+    console.log(arg)
+    this.setState({})
+  }
+
+  findOnClick() {
+    // cardIds.map().filter()
+  }
 
   render() {
     const { store } = this.props
@@ -23,12 +29,13 @@ class App extends Component {
               key={list.id}
               header={list.header}
               cards={list.cardIds.map(id => store.allCards[id])}
+              removeOnClick={this.removeOnClick}
             />
           ))}
         </div>
       </main>
     );
-  }
+  };
 }
 
 export default App;

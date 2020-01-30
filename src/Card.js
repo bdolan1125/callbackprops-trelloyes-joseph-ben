@@ -5,7 +5,12 @@ export default function Card(props) {
   return (
     <div className='Card'>
       <button
-        type='button'
+        type='button' 
+       onClick = {() => {
+         console.log(props.id)
+
+        props.hotdog(props.id)
+        }}
       >
         delete
       </button>
